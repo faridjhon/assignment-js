@@ -27,32 +27,22 @@ function budgetCalculator (watch,phone,laptop){
 /*=====================================================================================*/
 //hotelCost//
 function hotelCost(days){
-    var a=5;
-    var b=4;
-    var c=3;
-    var sum1=0;
-    var sum2=0;
-    var sum3=0;
-    var counter=1;
-    for (let i = 1; i <= days; i++) {
-        if (i<=10) {
-            sum1=counter*a;
-            counter++;
-            
-        }else if (i<=20) {
-            counter=1;
-            sum2=sum2+counter*b;
-            
-            
-        }else if (i>20) {
-            counter=1;
-            sum3=sum3+counter*c;
-            
-            
-        }        
-        
+    let a=50;
+    let b=40;
+    let c=30;
+    var sum = 0
+
+    for (let i = 1; i <=days; i++) {
+     if(i<=10){
+         sum = sum+a;
+     }else if(i>10 && i<=20){
+         sum =sum+b;
+     }else {
+         sum =sum+c;
+     }
     }
-    return(sum1+sum2+sum3);
+     
+    return sum;
 }
 
 /*==============================================================*/
